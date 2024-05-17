@@ -10,17 +10,61 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <div class="container-fluid">
+    <header class="header">
+      <div class="logo-container">
+        <video
+          src="src/assets/img/videos/27706-365890968_tiny.mp4"
+          id="logoVideo"
+          autoplay
+          muted
+          loop
+          preload
+          class="video-bg"
+        ></video>
+        <h1 class="text-overlay">
+          Easy Domain Naming Made Simple
+        </h1>
         <img
           src="src/assets/img/_825550f1-86ec-4fc6-9702-a77f63078de7.jpg"
-          class="rounded-circle"
-          alt="..."
+          class="logo-overlay rounded-circle"
+          alt="Logo"
         />
       </div>
+    </header>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="card bg-dark text-white mt-5">
+        <h5 class="card-header text-white fs-3 fw-bold bg-secondary">
+          Easily check if your domain is available
+        </h5>
+        <div class="card-body">
+          <h5>Verificar Disponibilidad de Dominio</h5>
+          <form id="domainForm" class="d-flex justify-content-between">
+            <input
+              class="col-8"
+              type="text"
+              id="domainName"
+              placeholder="Ingrese el nombre de dominio"
+            />
+            <button type="submit" class="col-2 btn btn-success">
+              Verificar
+            </button>
+          </form>
+          <p id="availabilityMessage"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid text-center">
       <div class="fixed-bottom p-4">
         Made with ❤️ by
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
