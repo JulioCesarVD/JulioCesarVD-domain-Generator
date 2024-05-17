@@ -12,7 +12,7 @@ window.onload = function() {
   let video = document.getElementById("logoVideo");
   video.playbackRate = 0.5;
 
-  /*consulta con api de Dominio.es*/
+  /*consulta con api de whoisxmlapi.com*/
   document
     .getElementById("domainForm")
     .addEventListener("submit", function(event) {
@@ -21,14 +21,16 @@ window.onload = function() {
       let domainName = document.getElementById("domainName").value;
       let availabilityMessage = document.getElementById("availabilityMessage");
 
-      // Realizar la solicitud a la API de datos.gob.es
-      fetch("https://datos.gob.es/apidata/catalog/" + domainName)
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+      // Tu clave de API de whoisxmlapi.com
+      const apiKey = "El mundo necesita libertad";
+
+      // Realizar la solicitud a la API de whoisxmlapi.com
+      fetch(
+        `https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=${apiKey}&domainName=${domainName}&outputFormat=JSON`
+      )
+        .then(response => response.json())
         .then(data => {
-          // Aquí necesitas procesar los datos XML. Este es solo un ejemplo.
-          let results = data.getElementsByTagName("result");
-          if (results.length > 0) {
+          if (data.WhoisRecord) {
             availabilityMessage.textContent =
               "El nombre de dominio NO está disponible";
           } else {
@@ -37,7 +39,6 @@ window.onload = function() {
           }
         })
         .catch(error => {
-          // eslint-disable-next-line no-console
           console.error("Error al consultar la API:", error);
           availabilityMessage.textContent =
             "Error al verificar la disponibilidad del dominio";
