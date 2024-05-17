@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
+    <script
+      src="https://kit.fontawesome.com/95395513ca.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -23,7 +27,7 @@
     <header class="header">
       <div class="logo-container">
         <video
-          src="src/assets/img/videos/27706-365890968_tiny.mp4"
+          src="src/assets/img/videos/22449-327996264_tiny.mp4"
           id="logoVideo"
           autoplay
           muted
@@ -31,9 +35,7 @@
           preload
           class="video-bg"
         ></video>
-        <h1 class="text-overlay">
-          Easy Domain Naming Made Simple
-        </h1>
+        <h1 class="text-overlay">Easy Domain Naming Made Simple</h1>
         <img
           src="src/assets/img/_825550f1-86ec-4fc6-9702-a77f63078de7.jpg"
           class="logo-overlay rounded-circle"
@@ -41,34 +43,160 @@
         />
       </div>
     </header>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="card bg-dark text-white mt-5">
-        <h5 class="card-header text-white fs-3 fw-bold bg-secondary">
-          Easily check if your domain is available
-        </h5>
-        <div class="card-body">
-          <h5>Verificar Disponibilidad de Dominio</h5>
-          <form id="domainForm" class="d-flex justify-content-between">
-            <input
-              class="col-8"
-              type="text"
-              id="domainName"
-              placeholder="Ingrese el nombre de dominio"
-            />
-            <button type="submit" class="col-2 btn btn-success">
-              Verificar
-            </button>
-          </form>
-          <p id="availabilityMessage"></p>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="pills-home-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-home"
+          type="button"
+          role="tab"
+          aria-controls="pills-home"
+          aria-selected="true"
+        >
+          Home
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-Domain-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-Domain"
+          type="button"
+          role="tab"
+          aria-controls="pills-Domain"
+          aria-selected="false"
+        >
+          Domain Generator
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-Verifier-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-Verifier"
+          type="button"
+          role="tab"
+          aria-controls="pills-Verifier"
+          aria-selected="false"
+        >
+          Verifier
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-contact-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-contact"
+          type="button"
+          role="tab"
+          aria-controls="pills-contact"
+          aria-selected="false"
+        >
+          Contact
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+        tabindex="0"
+      >
+        <p>Home content goes here...</p>
+        <p>Add more content here to ensure scrolling...</p>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-Domain"
+        role="tabpanel"
+        aria-labelledby="pills-Domain-tab"
+        tabindex="0"
+      >
+        <p>Domain Generator content goes here...</p>
+        <p>Add more content here to ensure scrolling...</p>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-Verifier"
+        role="tabpanel"
+        aria-labelledby="pills-Verifier-tab"
+        tabindex="0"
+      >
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="card bg-dark text-white mt-5" style="width: 40%;">
+            <h5>Easily check if your domain is available</h5>
+            <div class="card-body">
+              <h5>Verify Domain Availability</h5>
+              <form id="domainForm" class="d-flex justify-content-between">
+                <input
+                  class="col-8"
+                  type="text"
+                  id="domainName"
+                  placeholder="Enter the domain name"
+                />
+                <button type="submit" class="col-4 btn btn-success">
+                  Check
+                </button>
+              </form>
+              <p id="availabilityMessage"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+        tabindex="0"
+      >
+        <div
+          class="container-fluid banner text-white d-flex justify-content-center border p-2 rounded"
+        >
+          <h1>Contacto Julio Cesar Vasquez</h1>
+        </div>
+        <div class="card-group gap-5 mt-5">
+          <div class="card">
+            <i class="fa-brands fa-linkedin fa-3x"></i>
+            <div class="card-body">
+              <h5 class="card-title">LinkedIn</h5>
+              <p class="card-text">
+                <a
+                  href="https://www.linkedin.com/in/julio-cesar-vasquez-4861b216b/"
+                  >julio-cesar-vasquez-4861b216b</a
+                >
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <i class="fa-brands fa-github fa-3x"></i>
+            <div class="card-body">
+              <h5 class="card-title">Github</h5>
+              <p class="card-text">
+                <a href="https://github.com/JulioCesarVD">JulioCesarVD</a>
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="container-fluid text-center">
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
