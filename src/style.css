@@ -1,6 +1,52 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-.rounded-circle {
-  width: 15%;
-  height: 15%;
-  display: flex;
+
+body {
+  background-color: #000000;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.logo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text-overlay,
+.logo-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  color: white;
+}
+
+.text-overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Jersey 25";
+  color: rgb(236, 109, 35);
+  font-size: 44px;
+  font-weight: bolder;
+}
+
+.logo-overlay {
+  height: 90%;
+  opacity: 0.9;
+  filter: brightness(90%);
 }
