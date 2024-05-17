@@ -1,1 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+.rounded-circle {
+  width: 15%;
+  height: 15%;
+  display: flex;
+}
