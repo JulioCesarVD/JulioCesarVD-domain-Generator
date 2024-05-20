@@ -3,9 +3,6 @@ import "bootstrap";
 import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-import "dotenv/config";
-require("dotenv").config();
-console.log(process.env);
 
 // Función para generar dominios
 function generateDomains() {
@@ -56,17 +53,15 @@ window.onload = function() {
 
       let domainName = document.getElementById("domainName").value;
       let availabilityMessage = document.getElementById("availabilityMessage");
+      console.log(domainName);
 
-      // Tu clave de API de whoisxmlapi.com
-      const apiKey = process.env.API_KEY_TEST;
-      console.log(`ESTA ES LA API KEY ${apiKey}`);
       // Realizar la solicitud a la API de whoisxmlapi.com
       fetch(
-        `https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=${apiKey}&domainName=${domainName}&outputFormat=JSON`
+        `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=at_6rgoVo8OZGOTzu1eYIZtyBHqukIxs&domainName=${domainName}&credits=DA`
       )
         .then(response => response.json())
         .then(data => {
-          if (data.WhoisRecord) {
+          if (data.DomainInfo.domainAvailability == "UNAVAILABLE") {
             availabilityMessage.textContent =
               "El nombre de dominio NO está disponible";
           } else {
